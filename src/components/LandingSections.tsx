@@ -58,10 +58,10 @@ export default function LandingSections() {
 
         {/* Horizontal scroll gallery */}
         <div
-          className="flex gap-5 overflow-x-auto px-6 md:px-10 pb-6 scroll-smooth"
-          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+          className="flex gap-5 overflow-x-auto px-6 md:px-10 pb-6"
+          style={{ scrollbarWidth: "none", msOverflowStyle: "none", touchAction: "pan-x" }}
         >
-          <style>{`.products-scroll::-webkit-scrollbar { display: none; }`}</style>
+          <style>{`#products-scroll::-webkit-scrollbar { display: none; }`}</style>
           {PRODUCT_CATEGORIES.map(({ key, image }, i) => (
             <motion.div
               key={key}
@@ -70,14 +70,15 @@ export default function LandingSections() {
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
               className="flex flex-col items-center shrink-0 group cursor-default"
-              style={{ width: "clamp(220px, 28vw, 340px)" }}
+              style={{ width: "clamp(200px, 26vw, 320px)" }}
             >
-              {/* Image card */}
+              {/* Image card — no zoom so mobile scroll isn't intercepted */}
               <div className="w-full rounded-2xl overflow-hidden border border-border shadow-sm group-hover:shadow-lg group-hover:border-primary/30 transition-all duration-300 aspect-[4/5] bg-muted">
                 <img
                   src={image}
                   alt={t(`products.${key}.name`)}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover"
+                  draggable={false}
                 />
               </div>
               {/* Name below */}

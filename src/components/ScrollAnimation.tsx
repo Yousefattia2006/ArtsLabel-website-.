@@ -77,15 +77,13 @@ export default function ScrollAnimation() {
 
   return (
     <div ref={containerRef} className="relative" style={{ height: "300vh" }}>
-      <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden" style={{ background: "#F5F4F0" }}>
-        <div className="w-full max-w-7xl mx-auto px-6 md:px-12 h-full flex items-center">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 w-full items-center">
+      <div className="sticky top-0 h-screen flex items-start justify-center overflow-hidden" style={{ background: "#F5F4F0" }}>
+        <div className="w-full max-w-7xl mx-auto px-6 md:px-12 h-full flex items-start pt-20 md:pt-24">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 w-full items-start">
             {/* Image Side */}
-            <div className="relative flex items-center justify-center order-1 md:order-1">
-              {/* Fading edges */}
-              
+            <div className="relative flex items-start justify-center order-1 md:order-1 pt-4">
               <div className="absolute inset-y-0 right-0 w-16 z-10" style={{ background: "linear-gradient(to left, #F5F4F0, transparent)" }} />
-              <div className="relative w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem]">
+              <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-[22rem] lg:h-[22rem]">
                 {images.map((src, i) => (
                   <img
                     key={i}
@@ -99,49 +97,36 @@ export default function ScrollAnimation() {
             </div>
 
             {/* Text Side */}
-            <div className="relative order-2 md:order-2 h-48 md:h-80" dir={isRTL ? "rtl" : "ltr"}>
+            <div className="relative order-2 md:order-2 h-64 md:h-80 pt-4" dir={isRTL ? "rtl" : "ltr"}>
               {steps.map((step, i) => (
                 <div
                   key={i}
-                  className="absolute inset-0 flex flex-col justify-center"
+                  className="absolute inset-0 flex flex-col justify-start"
                   style={{ ...getVisibility(i), willChange: "transform, opacity" }}
                 >
                   {/* Accent line */}
                   <div className="w-10 h-[2px] mb-4" style={{ background: "#111111" }} />
 
                   {/* Slide number */}
-                  <span
-                    className="text-sm tracking-widest mb-3 font-mono"
-                    style={{ color: "#AAAAAA" }}
-                  >
+                  <span className="text-sm tracking-widest mb-3 font-mono" style={{ color: "#AAAAAA" }}>
                     {step.num} / 03
                   </span>
 
                   {/* Headline */}
                   <h2
-                    className="sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-relaxed mb-4 text-5xl"
-                    style={{
-                      fontFamily: "'Cairo', sans-serif",
-                      color: "#111111",
-                      lineHeight: 1.4,
-                    }}
+                    className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4"
+                    style={{ fontFamily: "'Cairo', sans-serif", color: "#111111", lineHeight: 1.3 }}
                   >
                     {t(step.textKey)}
                   </h2>
 
-                  {/* Subtitle with decorative dot */}
+                  {/* Subtitle */}
                   <div className={`flex items-center gap-3 ${isRTL ? "flex-row-reverse justify-end" : ""}`}>
-                    {isRTL && (
-                      <div className="w-[2px] h-5 rounded-full" style={{ background: "#CCCCCC" }} />
-                    )}
-                    <p
-                      className="text-left font-serif font-bold text-primary bg-inherit !text-5xl"
-                    >
+                    {isRTL && <div className="w-[2px] h-5 rounded-full" style={{ background: "#CCCCCC" }} />}
+                    <p className="font-serif font-bold text-primary text-xl md:text-2xl">
                       {t(step.subKey)}
                     </p>
-                    {!isRTL && (
-                      <div className="w-[2px] h-5 rounded-full" style={{ background: "#CCCCCC" }} />
-                    )}
+                    {!isRTL && <div className="w-[2px] h-5 rounded-full" style={{ background: "#CCCCCC" }} />}
                   </div>
                 </div>
               ))}

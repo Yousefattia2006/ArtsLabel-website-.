@@ -185,59 +185,55 @@ export function CinematicFooter() {
     <>
       <style dangerouslySetInnerHTML={{ __html: STYLES }} />
 
-      <div
+      <footer
         ref={wrapperRef}
-        className="relative h-screen w-full"
-        style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
+        className="relative w-full overflow-hidden bg-background text-foreground cinematic-footer-wrapper"
       >
-        <footer className="fixed bottom-0 left-0 flex h-screen w-full flex-col justify-between overflow-hidden bg-background text-foreground cinematic-footer-wrapper">
-
           {/* Aurora glow */}
           <div className="footer-aurora absolute left-1/2 top-1/2 h-[60vh] w-[80vw] -translate-x-1/2 -translate-y-1/2 animate-footer-breathe rounded-[50%] blur-[80px] pointer-events-none z-0" />
           <div className="footer-bg-grid absolute inset-0 z-0 pointer-events-none" />
 
           {/* Giant background text */}
-          <div ref={giantTextRef} className="footer-giant-bg-text absolute -bottom-[5vh] left-1/2 -translate-x-1/2 whitespace-nowrap z-0 pointer-events-none select-none">
+          <div ref={giantTextRef} className="footer-giant-bg-text absolute -bottom-[3vh] left-1/2 -translate-x-1/2 whitespace-nowrap z-0 pointer-events-none select-none">
             ARTSLABEL
           </div>
 
           {/* Marquee */}
-          <div className="absolute top-12 left-0 w-full overflow-hidden border-y border-border/50 bg-background/60 backdrop-blur-md py-4 z-10 -rotate-2 scale-110 shadow-2xl" dir="ltr">
+          <div className="relative w-full overflow-hidden border-b border-border/50 bg-background/60 backdrop-blur-md py-3 z-10" dir="ltr">
             <div className="flex w-max animate-footer-scroll-marquee">
-              {/* 6 copies — guarantees no blank gap at any screen width */}
               <MarqueeItem /><MarqueeItem /><MarqueeItem />
               <MarqueeItem /><MarqueeItem /><MarqueeItem />
             </div>
           </div>
 
           {/* Centre content */}
-          <div className="relative z-10 flex flex-1 flex-col items-center justify-center px-6 mt-20 w-full max-w-5xl mx-auto">
-            <h2 ref={headingRef} className="text-5xl md:text-8xl font-black footer-text-glow tracking-tighter mb-12 text-center" style={{ fontFamily: "'Cairo', sans-serif" }}>
+          <div className="relative z-10 flex flex-col items-center justify-center px-6 py-16 md:py-24 w-full max-w-5xl mx-auto">
+            <h2 ref={headingRef} className="text-4xl sm:text-6xl md:text-8xl font-black footer-text-glow tracking-tighter mb-10 text-center" style={{ fontFamily: "'Cairo', sans-serif" }}>
               {t("footer.standout")}
             </h2>
 
-            <div ref={linksRef} className="flex flex-col items-center gap-6 w-full">
+            <div ref={linksRef} className="flex flex-col items-center gap-5 w-full">
               {/* Primary CTA pills */}
-              <div className="flex flex-wrap justify-center gap-4 w-full">
+              <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 w-full">
                 <MagneticButton as="a" href="https://wa.me/201226613862" target="_blank" rel="noopener noreferrer"
-                  className="footer-glass-pill px-10 py-5 rounded-full text-foreground font-bold text-sm md:text-base flex items-center gap-3 group">
-                  <MessageCircle className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
+                  className="footer-glass-pill px-7 py-4 rounded-full text-foreground font-bold text-sm flex items-center justify-center gap-3 group w-full sm:w-auto">
+                  <MessageCircle className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors shrink-0" />
                   WhatsApp
                 </MagneticButton>
                 <MagneticButton as="a" href="mailto:Ahmed@artslabels.com"
-                  className="footer-glass-pill px-10 py-5 rounded-full text-foreground font-bold text-sm md:text-base flex items-center gap-3 group">
-                  <Mail className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
+                  className="footer-glass-pill px-7 py-4 rounded-full text-foreground font-bold text-sm flex items-center justify-center gap-3 group w-full sm:w-auto">
+                  <Mail className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors shrink-0" />
                   Ahmed@artslabels.com
                 </MagneticButton>
                 <MagneticButton as="a" href="tel:01226613862"
-                  className="footer-glass-pill px-10 py-5 rounded-full text-foreground font-bold text-sm md:text-base flex items-center gap-3 group">
-                  <Phone className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
+                  className="footer-glass-pill px-7 py-4 rounded-full text-foreground font-bold text-sm flex items-center justify-center gap-3 group w-full sm:w-auto">
+                  <Phone className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors shrink-0" />
                   012 26613862
                 </MagneticButton>
               </div>
 
               {/* Secondary nav pills */}
-              <div className="flex flex-wrap justify-center gap-3 md:gap-4 w-full mt-2">
+              <div className="flex flex-wrap justify-center gap-2 md:gap-3 w-full mt-1">
                 {[
                   { label: t("nav.products"),    id: "products"  },
                   { label: t("materials.title"), id: "materials" },
@@ -245,7 +241,7 @@ export function CinematicFooter() {
                   { label: t("nav.contact"),     id: "contact"   },
                 ].map(({ label, id }) => (
                   <MagneticButton key={id} as="button" onClick={() => scrollTo(id)}
-                    className="footer-glass-pill px-6 py-3 rounded-full text-muted-foreground font-medium text-xs md:text-sm hover:text-foreground">
+                    className="footer-glass-pill px-5 py-2.5 rounded-full text-muted-foreground font-medium text-xs hover:text-foreground">
                     {label}
                   </MagneticButton>
                 ))}
@@ -254,23 +250,23 @@ export function CinematicFooter() {
           </div>
 
           {/* Bottom bar */}
-          <div className="relative z-20 w-full pb-8 px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="relative z-20 w-full pb-8 px-6 md:px-12 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-border/30 pt-6">
 
-            <div className="text-foreground/60 text-[10px] md:text-xs font-semibold tracking-widest uppercase order-2 md:order-1 font-body">
+            <div className="text-foreground/60 text-[10px] md:text-xs font-semibold tracking-widest uppercase font-body text-center sm:text-left order-3 sm:order-1">
               {t("footer.rights2")}
             </div>
 
             {/* Crafted by MY Studios */}
-            <div className="footer-glass-pill px-6 py-3 rounded-full flex items-center gap-2 order-1 md:order-2 cursor-default border-border/50">
+            <div className="footer-glass-pill px-5 py-2.5 rounded-full flex items-center gap-2 cursor-default border-border/50 order-1 sm:order-2">
               <span className="text-muted-foreground text-[10px] md:text-xs font-bold uppercase tracking-widest font-body">{t("footer.crafted")}</span>
-              <span className="animate-footer-heartbeat text-sm md:text-base text-destructive">❤</span>
+              <span className="animate-footer-heartbeat text-sm text-destructive">❤</span>
               <span className="text-muted-foreground text-[10px] md:text-xs font-bold uppercase tracking-widest font-body">{t("footer.by")}</span>
               <span className="text-foreground font-black text-xs md:text-sm tracking-normal ml-1 rtl:ml-0 rtl:mr-1">MY Studios</span>
             </div>
 
             {/* Back to top */}
             <MagneticButton as="button" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-              className="w-12 h-12 rounded-full footer-glass-pill flex items-center justify-center text-muted-foreground hover:text-foreground group order-3">
+              className="w-11 h-11 rounded-full footer-glass-pill flex items-center justify-center text-muted-foreground hover:text-foreground group order-2 sm:order-3">
               <svg className="w-5 h-5 transform group-hover:-translate-y-1.5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
               </svg>
@@ -278,7 +274,6 @@ export function CinematicFooter() {
           </div>
 
         </footer>
-      </div>
     </>
   );
 }
