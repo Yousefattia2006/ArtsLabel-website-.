@@ -1,8 +1,6 @@
 import { Mail, MapPin, Phone } from "lucide-react";
 import { motion } from "framer-motion";
-import { ContainerTextScroll } from "@/components/ui/container-text-scroll";
 import { useLanguage } from "@/contexts/LanguageContext";
-import labelRollImg from "@/assets/label-roll.jpg";
 import { CinematicFooter } from "@/components/ui/cinematic-footer";
 
 import { ImageComparison } from "@/components/ui/image-comparison-slider";
@@ -89,24 +87,6 @@ export default function LandingSections() {
           ))}
         </div>
       </section>
-
-      {/* Label Quality Scroll */}
-      <section className="py-24 bg-background">
-        <ContainerTextScroll
-          titleComponent={
-            <h2 className="text-4xl md:text-6xl font-display font-bold text-white drop-shadow-lg">
-              {t("label.quality")}
-            </h2>
-          }
-        >
-          <img
-            src={labelRollImg}
-            alt={t("label.quality")}
-            className="w-full h-full object-cover object-center"
-          />
-        </ContainerTextScroll>
-      </section>
-
 
       {/* Image Comparison */}
       <section className="py-24 bg-background">
