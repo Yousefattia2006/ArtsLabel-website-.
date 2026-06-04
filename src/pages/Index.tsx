@@ -1,0 +1,25 @@
+import ScrollAnimation from "@/components/ScrollAnimation";
+import LandingSections from "@/components/LandingSections";
+import Navbar from "@/components/Navbar";
+import TextRotateSection from "@/components/TextRotateSection";
+import HeroSection from "@/components/HeroSection";
+import WhatsAppButton from "@/components/WhatsAppButton";
+import MaterialsSection from "@/components/MaterialsSection";
+import AnnouncementStrip from "@/components/AnnouncementStrip";
+
+const Index = () => {
+  return (
+    <main className="bg-background">
+      <Navbar />
+      <HeroSection />
+      <AnnouncementStrip />
+      <ScrollAnimation />
+      <TextRotateSection />
+      <MaterialsSection />
+      <LandingSections />
+      <WhatsAppButton />
+    </main>
+  );
+};
+
+export default Index;

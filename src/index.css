@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=Cairo:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 35 25% 95%;
+    --foreground: 30 10% 15%;
+
+    --card: 35 20% 97%;
+    --card-foreground: 30 10% 15%;
+
+    --popover: 35 20% 97%;
+    --popover-foreground: 30 10% 15%;
+
+    --primary: 30 85% 52%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 35 20% 90%;
+    --secondary-foreground: 30 10% 20%;
+
+    --muted: 35 15% 92%;
+    --muted-foreground: 30 8% 50%;
+
+    --accent: 145 40% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 35 15% 85%;
+    --input: 35 15% 85%;
+    --ring: 30 85% 52%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    --hero-bg: 35 25% 95%;
+    --section-warm: 35 30% 93%;
+    --text-hero: 30 10% 15%;
+    --text-subtitle: 30 8% 45%;
+    --gradient-warm: linear-gradient(135deg, hsl(30 85% 52%), hsl(40 90% 55%));
+    --shadow-product: 0 25px 60px -15px hsl(30 30% 30% / 0.2);
+    --shadow-card: 0 8px 30px -8px hsl(30 20% 30% / 0.1);
+  }
+
+  .dark {
+    --background: 30 10% 8%;
+    --foreground: 35 20% 95%;
+    --card: 30 10% 10%;
+    --card-foreground: 35 20% 95%;
+    --popover: 30 10% 10%;
+    --popover-foreground: 35 20% 95%;
+    --primary: 30 85% 52%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 30 10% 15%;
+    --secondary-foreground: 35 20% 95%;
+    --muted: 30 10% 15%;
+    --muted-foreground: 35 10% 55%;
+    --accent: 145 40% 45%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 30 10% 18%;
+    --input: 30 10% 18%;
+    --ring: 30 85% 52%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+  h1, h2, h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+}
+
+@layer utilities {
+  .text-gradient-warm {
+    background: var(--gradient-warm);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .shadow-product {
+    box-shadow: var(--shadow-product);
+  }
+  .shadow-card-soft {
+    box-shadow: var(--shadow-card);
+  }
+}
