@@ -32,8 +32,8 @@ export default function LandingSections() {
   return (
     <>
       {/* Products */}
-      <section id="products" className="py-24 bg-background overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 md:px-10 mb-10">
+      <section id="products" className="py-16 md:py-24 bg-background overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 md:px-10 mb-8">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -68,7 +68,7 @@ export default function LandingSections() {
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
               className="flex flex-col items-center shrink-0 group cursor-default"
-              style={{ width: "clamp(200px, 26vw, 320px)" }}
+              style={{ width: "clamp(160px, 60vw, 320px)" }}
             >
               {/* Image card — no zoom so mobile scroll isn't intercepted */}
               <div className="w-full rounded-2xl overflow-hidden border border-border shadow-sm group-hover:shadow-lg group-hover:border-primary/30 transition-all duration-300 aspect-[4/5] bg-muted">
@@ -89,8 +89,8 @@ export default function LandingSections() {
       </section>
 
       {/* Image Comparison */}
-      <section className="py-24 bg-background">
-        <div className="max-w-5xl mx-auto px-4">
+      <section className="py-16 md:py-24 bg-background">
+        <div className="max-w-5xl mx-auto px-4 md:px-6">
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -121,7 +121,7 @@ export default function LandingSections() {
       </section>
 
       {/* Contact */}
-      <section id="contact" className="py-24 px-4 bg-background">
+      <section id="contact" className="py-16 md:py-24 px-4 md:px-6 bg-background">
         <motion.div
           className="max-w-3xl mx-auto"
           initial="hidden"
@@ -129,39 +129,42 @@ export default function LandingSections() {
           viewport={{ once: true, amount: 0.2 }}
           variants={staggerContainer}
         >
-          <motion.h2 variants={fadeUp} className="text-3xl md:text-4xl font-display font-bold text-center text-foreground mb-4">
+          <motion.h2 variants={fadeUp} className="text-2xl md:text-4xl font-display font-bold text-center text-foreground mb-3">
             {t("contact.title")}
           </motion.h2>
-          <motion.p variants={fadeUp} className="text-center text-muted-foreground mb-12 max-w-xl mx-auto font-body">
+          <motion.p variants={fadeUp} className="text-center text-muted-foreground mb-10 max-w-xl mx-auto font-body text-sm md:text-base">
             {t("contact.subtitle")}
           </motion.p>
-          <motion.div variants={fadeUp} className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <div className="flex flex-col items-center text-center gap-3">
-              <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-primary-foreground">
+
+          {/* Contact info cards — tap-friendly on mobile */}
+          <motion.div variants={fadeUp} className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
+            <a href="mailto:Ahmed@artslabels.com" className="flex items-center gap-4 p-4 rounded-xl border border-border bg-card hover:border-primary/50 transition-colors min-h-[64px] cursor-pointer">
+              <div className="w-11 h-11 rounded-full bg-primary flex items-center justify-center text-primary-foreground shrink-0">
                 <Mail className="w-5 h-5" />
               </div>
-              <span className="text-sm text-foreground font-body">{t("contact.email")}</span>
-            </div>
-            <div className="flex flex-col items-center text-center gap-3">
-              <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-primary-foreground">
+              <span className="text-sm text-foreground font-body leading-snug">{t("contact.email")}</span>
+            </a>
+            <a href="tel:01226613862" className="flex items-center gap-4 p-4 rounded-xl border border-border bg-card hover:border-primary/50 transition-colors min-h-[64px] cursor-pointer">
+              <div className="w-11 h-11 rounded-full bg-primary flex items-center justify-center text-primary-foreground shrink-0">
                 <Phone className="w-5 h-5" />
               </div>
               <span className="text-sm text-foreground font-body">{t("contact.phone")}</span>
-            </div>
-            <div className="flex flex-col items-center text-center gap-3">
-              <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-primary-foreground">
+            </a>
+            <div className="flex items-center gap-4 p-4 rounded-xl border border-border bg-card min-h-[64px]">
+              <div className="w-11 h-11 rounded-full bg-primary flex items-center justify-center text-primary-foreground shrink-0">
                 <MapPin className="w-5 h-5" />
               </div>
-              <span className="text-sm text-foreground font-body">{t("contact.location")}</span>
+              <span className="text-sm text-foreground font-body leading-snug">{t("contact.location")}</span>
             </div>
           </motion.div>
-          <motion.form variants={fadeUp} className="bg-card rounded-lg p-8 border border-border shadow-card-soft space-y-4">
+
+          <motion.form variants={fadeUp} className="bg-card rounded-2xl p-6 md:p-8 border border-border shadow-card-soft space-y-4">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <input type="text" placeholder={t("contact.name.placeholder")} className="w-full px-4 py-3 rounded-md bg-background border border-border text-foreground placeholder:text-muted-foreground text-sm font-body focus:outline-none focus:ring-2 focus:ring-ring" />
-              <input type="email" placeholder={t("contact.email.placeholder")} className="w-full px-4 py-3 rounded-md bg-background border border-border text-foreground placeholder:text-muted-foreground text-sm font-body focus:outline-none focus:ring-2 focus:ring-ring" />
+              <input type="text" placeholder={t("contact.name.placeholder")} className="w-full px-4 py-4 rounded-xl bg-background border border-border text-foreground placeholder:text-muted-foreground text-base font-body focus:outline-none focus:ring-2 focus:ring-ring min-h-[52px]" />
+              <input type="email" placeholder={t("contact.email.placeholder")} className="w-full px-4 py-4 rounded-xl bg-background border border-border text-foreground placeholder:text-muted-foreground text-base font-body focus:outline-none focus:ring-2 focus:ring-ring min-h-[52px]" />
             </div>
-            <textarea placeholder={t("contact.message.placeholder")} rows={4} className="w-full px-4 py-3 rounded-md bg-background border border-border text-foreground placeholder:text-muted-foreground text-sm font-body focus:outline-none focus:ring-2 focus:ring-ring resize-none" />
-            <button type="submit" className="w-full py-3 rounded-md bg-primary text-primary-foreground font-body font-medium text-sm hover:opacity-90 transition-opacity">
+            <textarea placeholder={t("contact.message.placeholder")} rows={4} className="w-full px-4 py-4 rounded-xl bg-background border border-border text-foreground placeholder:text-muted-foreground text-base font-body focus:outline-none focus:ring-2 focus:ring-ring resize-none" />
+            <button type="submit" className="w-full min-h-[52px] rounded-xl bg-primary text-primary-foreground font-body font-semibold text-base hover:opacity-90 active:scale-[0.98] transition-all touch-manipulation cursor-pointer">
               {t("contact.submit")}
             </button>
           </motion.form>

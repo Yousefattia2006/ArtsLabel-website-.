@@ -1,21 +1,19 @@
 import { LayoutGroup, motion } from "framer-motion";
 import { TextRotate } from "@/components/ui/text-rotate";
-import { useLanguage } from "@/contexts/LanguageContext";
+
+const ROTATING_WORDS = ["IML (In-Mould Label)", "Labels", "Stickers"];
 
 export default function TextRotateSection() {
-  const { t, lang } = useLanguage();
-  const isRTL = lang === "ar";
-
   return (
-    <section className="flex items-center justify-center min-h-[40vh] bg-background px-4 py-12" dir={isRTL ? "rtl" : "ltr"}>
+    <section className="flex items-center justify-center min-h-[35vh] bg-background px-6 py-12 md:py-16" dir="ltr">
       <LayoutGroup>
         <motion.div className="flex flex-col items-center w-full" layout>
           <h2
-            className="flex items-center flex-wrap justify-center gap-2 sm:gap-3 text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-display font-bold text-foreground"
+            className="flex items-center flex-wrap justify-center gap-2 sm:gap-3 text-2xl sm:text-4xl md:text-5xl lg:text-7xl font-display font-bold text-foreground text-center leading-tight"
           >
-            <span className="whitespace-nowrap">{t("rotate.prefix")}</span>
+            <span className="whitespace-nowrap">ARTS Label prints</span>
             <TextRotate
-              texts={[t("rotate.word1"), t("rotate.word2"), t("rotate.word3")]}
+              texts={ROTATING_WORDS}
               mainClassName="overflow-hidden h-[1.2em] min-w-[3em] sm:min-w-[4em] flex items-center justify-center"
               splitBy="words"
               staggerFrom="last"

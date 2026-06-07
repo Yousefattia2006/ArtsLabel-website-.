@@ -20,8 +20,8 @@ export default function MaterialsSection() {
 
   return (
     <section id="materials" className="bg-background relative overflow-hidden w-full">
-      <FloatingPathsBackground position={1} className="py-24">
-        <div className="max-w-7xl mx-auto px-4 relative z-10">
+      <FloatingPathsBackground position={1} className="py-16 md:py-24">
+        <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
 
           {/* Header */}
           <motion.div
@@ -59,7 +59,7 @@ export default function MaterialsSection() {
                 <motion.div
                   key={key}
                   variants={fadeUp}
-                  className="group flex items-center gap-3 px-5 py-4 bg-card/80 backdrop-blur-sm border border-border rounded-xl hover:border-primary/50 hover:shadow-card-soft transition-all duration-200 cursor-default"
+                  className="group flex items-center gap-3 px-4 py-4 bg-card/80 backdrop-blur-sm border border-border rounded-xl hover:border-primary/50 hover:shadow-card-soft transition-all duration-200 cursor-default min-h-[52px]"
                 >
                   <span className="text-primary font-bold shrink-0 leading-none">—</span>
                   <h3 className="font-display text-sm font-semibold text-foreground leading-snug">
@@ -89,7 +89,7 @@ export default function MaterialsSection() {
                 <motion.div
                   key={key}
                   variants={fadeUp}
-                  className="group flex items-center gap-3 px-5 py-4 bg-card/80 backdrop-blur-sm border border-border rounded-xl hover:border-primary/50 hover:shadow-card-soft transition-all duration-200 cursor-default"
+                  className="group flex items-center gap-3 px-4 py-4 bg-card/80 backdrop-blur-sm border border-border rounded-xl hover:border-primary/50 hover:shadow-card-soft transition-all duration-200 cursor-default min-h-[52px]"
                 >
                   <span className="text-primary font-bold shrink-0 leading-none">—</span>
                   <h3 className="font-display text-sm font-semibold text-foreground leading-snug">

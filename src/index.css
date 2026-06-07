@@ -5,6 +5,17 @@
 @tailwind utilities;
 
 @layer base {
+  /* Mobile-first global resets */
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    -webkit-overflow-scrolling: touch;
+  }
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
   :root {
     --background: 35 25% 95%;
     --foreground: 30 10% 15%;
