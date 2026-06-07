@@ -1,3 +1,4 @@
+import ScrollAnimation from "@/components/ScrollAnimation";
 import LandingSections from "@/components/LandingSections";
 import Navbar from "@/components/Navbar";
 import TextRotateSection from "@/components/TextRotateSection";
@@ -10,6 +11,7 @@ const Index = () => {
     <main className="bg-background">
       <Navbar />
       <HeroSection />
+      <ScrollAnimation />
       <TextRotateSection />
       <MaterialsSection />
       <LandingSections />
