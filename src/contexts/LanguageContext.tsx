@@ -68,6 +68,15 @@ const translations: Record<Language, Record<string, string>> = {
     "beforeafter.before": "Before",
     "beforeafter.after": "After",
 
+    // IML Section
+    "iml.heading": "IML Printing",
+    "iml.title": "In-Mould Label Printing",
+    "iml.body": "IML (In-Mould Labelling) is an advanced labelling technology where the label is placed inside the mould before the plastic is injected — creating a permanent, seamless bond between label and container. The result is a label that never peels, bubbles, or shifts. It delivers premium shelf presence, superior durability, and a fully recyclable single-material package. Ideal for containers used in food, personal care, and household products.",
+    "iml.feature1": "Permanent bond — label becomes part of the container",
+    "iml.feature2": "360° full-wrap coverage with photographic print quality",
+    "iml.feature3": "100% recyclable — no adhesive, no separation needed",
+    "iml.feature4": "Resistant to moisture, heat, and chemicals",
+
     // Materials
     "materials.title": "Our Materials & Finishing",
     "materials.subtitle": "We use only premium-grade substrates and finishes to ensure every label performs as good as it looks.",
@@ -166,6 +175,15 @@ const translations: Record<Language, Record<string, string>> = {
     "beforeafter.subtitle": "شاهد كيف تحوّل ملصقاتنا المنتجات العادية إلى علامات تجارية جاهزة للعرض.",
     "beforeafter.before": "قبل",
     "beforeafter.after": "بعد",
+
+    // IML Section
+    "iml.heading": "طباعة IML",
+    "iml.title": "طباعة الليبل داخل القالب",
+    "iml.body": "IML (In-Mould Labelling) هي تقنية تغليف متقدمة يتم فيها وضع الليبل داخل القالب قبل حقن البلاستيك — مما يخلق ارتباطاً دائماً وسلساً بين الليبل والعبوة. النتيجة ليبل لا يتقشر أو ينتفخ أو يتحرك أبداً. يوفر حضوراً مميزاً على الرف، ومتانة فائقة، وعبوة قابلة لإعادة التدوير بالكامل.",
+    "iml.feature1": "ارتباط دائم — يصبح الليبل جزءاً من العبوة",
+    "iml.feature2": "تغطية كاملة 360° بجودة طباعة فوتوغرافية",
+    "iml.feature3": "قابل لإعادة التدوير 100% — بدون غراء",
+    "iml.feature4": "مقاوم للرطوبة والحرارة والمواد الكيميائية",
 
     // Materials
     "materials.title": "موادنا والتشطيبات",
