@@ -59,20 +59,12 @@ export default function IMLSection() {
             viewport={{ once: true, amount: 0.2 }}
             variants={isRTL ? fadeRight : fadeLeft}
           >
-            <div className="relative rounded-2xl overflow-hidden aspect-[4/5] bg-muted shadow-lg">
+            <div className="rounded-2xl overflow-hidden aspect-[4/5] bg-muted shadow-lg">
               <img
                 src="/iml-printing.jpg"
                 alt={t("iml.title")}
                 className="w-full h-full object-cover"
-                onError={(e) => {
-                  // Fallback if image not yet added
-                  (e.target as HTMLImageElement).style.display = "none";
-                }}
               />
-              {/* Placeholder shown until image is added */}
-              <div className="absolute inset-0 flex items-center justify-center bg-muted/80 text-muted-foreground text-sm font-body pointer-events-none">
-                <span className="opacity-50">Add /public/iml-printing.webp</span>
-              </div>
             </div>
           </motion.div>
 
