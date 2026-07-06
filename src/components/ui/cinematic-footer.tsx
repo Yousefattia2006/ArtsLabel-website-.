@@ -19,17 +19,17 @@ const STYLES = `
 .cinematic-footer-wrapper {
   font-family: 'Plus Jakarta Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
-  --pill-bg-1: color-mix(in oklch, var(--foreground) 3%, transparent);
-  --pill-bg-2: color-mix(in oklch, var(--foreground) 1%, transparent);
+  --pill-bg-1: color-mix(in oklch, var(--foreground) 12%, var(--background));
+  --pill-bg-2: color-mix(in oklch, var(--foreground) 7%, var(--background));
   --pill-shadow: color-mix(in oklch, var(--background) 50%, transparent);
-  --pill-highlight: color-mix(in oklch, var(--foreground) 10%, transparent);
+  --pill-highlight: color-mix(in oklch, var(--foreground) 15%, transparent);
   --pill-inset-shadow: color-mix(in oklch, var(--background) 80%, transparent);
-  --pill-border: color-mix(in oklch, var(--foreground) 8%, transparent);
-  --pill-bg-1-hover: color-mix(in oklch, var(--foreground) 8%, transparent);
-  --pill-bg-2-hover: color-mix(in oklch, var(--foreground) 2%, transparent);
-  --pill-border-hover: color-mix(in oklch, var(--foreground) 20%, transparent);
+  --pill-border: color-mix(in oklch, var(--foreground) 20%, transparent);
+  --pill-bg-1-hover: color-mix(in oklch, var(--foreground) 20%, var(--background));
+  --pill-bg-2-hover: color-mix(in oklch, var(--foreground) 10%, var(--background));
+  --pill-border-hover: color-mix(in oklch, var(--foreground) 30%, transparent);
   --pill-shadow-hover: color-mix(in oklch, var(--background) 70%, transparent);
-  --pill-highlight-hover: color-mix(in oklch, var(--foreground) 20%, transparent);
+  --pill-highlight-hover: color-mix(in oklch, var(--foreground) 25%, transparent);
 }
 
 @keyframes footer-breathe {
