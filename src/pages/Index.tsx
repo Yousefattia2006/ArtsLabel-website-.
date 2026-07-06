@@ -6,6 +6,7 @@ import HeroSection from "@/components/HeroSection";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import MaterialsSection from "@/components/MaterialsSection";
 import IMLSection from "@/components/IMLSection";
+import StickerLabelSection from "@/components/StickerLabelSection";
 
 const Index = () => {
   return (
@@ -15,6 +16,7 @@ const Index = () => {
       <ScrollAnimation />
       <TextRotateSection />
       <IMLSection />
+      <StickerLabelSection />
       <MaterialsSection />
       <LandingSections />
       <WhatsAppButton />

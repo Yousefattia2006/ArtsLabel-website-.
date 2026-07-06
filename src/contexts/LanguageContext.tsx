@@ -27,9 +27,9 @@ const translations: Record<Language, Record<string, string>> = {
     "strip.text": "Your product deserves a better label.",
 
     // Scroll Animation
-    "scroll.step1.text": "Excellent product, but no branding.",
+    "scroll.step1.text": "Excellent product, but no sticker label.",
     "scroll.step1.sub": "Your product deserves to be seen.",
-    "scroll.step2.text": "Fully customizable branding.",
+    "scroll.step2.text": "Fully customizable sticker label.",
     "scroll.step2.sub": "Labels designed to perfection.",
     "scroll.step3.text": "Let your product stand out.",
     "scroll.step3.sub": "From shelf to spotlight.",
@@ -42,8 +42,8 @@ const translations: Record<Language, Record<string, string>> = {
     "rotate.word3": "exceptional",
 
     // Products
-    "products.title": "Our Products",
-    "products.subtitle": "Everything you need to make your brand unforgettable.",
+    "products.title": "Markets we serve",
+    "products.subtitle": "Everything you need to make your sticker label unforgettable.",
     "products.cosmetics.name": "Cosmetics & Personal Care",
     "products.food.name": "Food & Beverage",
     "products.detergents.name": "Detergents & Cleaning Products",
@@ -76,6 +76,15 @@ const translations: Record<Language, Record<string, string>> = {
     "iml.feature2": "360° full-wrap coverage with photographic print quality",
     "iml.feature3": "100% recyclable — no adhesive, no separation needed",
     "iml.feature4": "Resistant to moisture, heat, and chemicals",
+
+    // Sticker Label Section
+    "sticker.heading": "Sticker Labels",
+    "sticker.title": "Premium Sticker Labels",
+    "sticker.body": "Our sticker labels combine high-quality materials with precision printing to deliver vibrant, durable results. Whether you need glossy, matte, or transparent finishes, our sticker labels adhere reliably to any surface — from glass and plastic to metal and paper — giving your product the shelf presence it deserves.",
+    "sticker.feature1": "Available in PE, PP, metallized, and transparent films",
+    "sticker.feature2": "UV coating and lamination for extra durability",
+    "sticker.feature3": "Custom shapes, sizes, and die-cutting",
+    "sticker.feature4": "Strong adhesion on glass, plastic, metal, and more",
 
     // Materials
     "materials.title": "Our Materials & Finishing",
@@ -184,6 +193,15 @@ const translations: Record<Language, Record<string, string>> = {
     "iml.feature2": "تغطية كاملة 360° بجودة طباعة فوتوغرافية",
     "iml.feature3": "قابل لإعادة التدوير 100% — بدون غراء",
     "iml.feature4": "مقاوم للرطوبة والحرارة والمواد الكيميائية",
+
+    // Sticker Label Section
+    "sticker.heading": "ليبل لاصق",
+    "sticker.title": "ليبل لاصق احترافي",
+    "sticker.body": "تجمع ليبوهاتنا اللاصقة بين مواد عالية الجودة وطباعة دقيقة لتقديم نتائج زاهية ومتينة. سواء كنت تحتاج إلى تشطيب لامع أو مطفأ أو شفاف، تلتصق ليبلاتنا بشكل موثوق على أي سطح — من الزجاج والبلاستيك إلى المعادن والورق.",
+    "sticker.feature1": "متوفر بأفلام PE وPP ومعدنية وشفافة",
+    "sticker.feature2": "طلاء UV والتغليف لمتانة إضافية",
+    "sticker.feature3": "أشكال وأحجام مخصصة وقطع دقيق",
+    "sticker.feature4": "التصاق قوي على الزجاج والبلاستيك والمعادن والمزيد",
 
     // Materials
     "materials.title": "موادنا والتشطيبات",

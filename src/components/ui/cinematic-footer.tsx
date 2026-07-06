@@ -84,7 +84,7 @@ const STYLES = `
 }
 
 .footer-giant-bg-text {
-  font-size: 22vw;
+  font-size: clamp(48px, 22vw, 22vw);
   line-height: 0.75;
   font-weight: 900;
   letter-spacing: -0.05em;
@@ -94,6 +94,7 @@ const STYLES = `
   -webkit-background-clip: text;
   background-clip: text;
   font-family: 'Cairo', sans-serif;
+  white-space: nowrap;
 }
 
 .footer-text-glow {

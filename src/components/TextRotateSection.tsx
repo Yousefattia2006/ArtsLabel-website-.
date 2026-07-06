@@ -5,7 +5,7 @@ const ROTATING_WORDS = ["IML (In-Mould Label)", "Labels", "Stickers"];
 
 export default function TextRotateSection() {
   return (
-    <section className="flex items-center justify-center min-h-[35vh] bg-background px-6 py-12 md:py-16" dir="ltr">
+    <section className="flex items-center justify-center min-h-[20vh] bg-background px-6 py-6 md:py-8" dir="ltr">
       <LayoutGroup>
         <motion.div className="flex flex-col items-center w-full" layout>
           <h2
